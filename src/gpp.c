@@ -1,6 +1,6 @@
 #include "prelesglobals.h"
 
-/* This file is the Kalliokoski version! */
+/* This file is the Kalliokoski_mod version! */
 
 /* Seasonality model of Mäkelä et al 2004 */
 double fS_model(double *S, double T, p2 GPP_par) {
@@ -68,7 +68,7 @@ double fCO2_VPD_exponent(double CO2, double xCO2 ) {
 double fCO2_ET_model_mean(double CO2, p2 GPP_par ) {
  /* return(1 - 1.95*(CO2-380)/(CO2-380+(GPP_par.bCO2)));
  */
-  return(1 - (CO2-380)/(CO2-380+GPP_par.bCO2));
+ return(1 / (1 + (CO2-380)/(CO2-380+GPP_par.bCO2)));
 }
 
 /* *****************************************************************/
@@ -128,7 +128,6 @@ void GPPfun(double *gpp, double *gpp380,
     *gpp380 = GPP_par.beta *  ppfd *  fAPAR * fSsub * fLsub * fEsub;
     fCO2 = fCO2_model_mean(CO2, GPP_par);
     *gpp = *gpp380 * fCO2;
-
     
     // if (LOGFLAG > 1.5) 
       // fprintf(flog, 

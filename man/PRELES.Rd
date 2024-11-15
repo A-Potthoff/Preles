@@ -2,7 +2,7 @@
 \alias{PRELES}
 \alias{preles}
 \alias{Preles}
-\title{Kalliokoski!.
+\title{Kalliokoski-mod!
 }
 \description{The model predicts gross primary production and evapotranpiration (and soil water balance) based on embedded empirical relationships and basic meteorological inputs.
 }
