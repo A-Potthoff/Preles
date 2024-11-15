@@ -1,0 +1,16 @@
+Package: Rprebasso
+Type: Package
+Title: PRELES, YASSO and PREBAS models
+Version: 0.3.0
+Author: Francesco Minunno, Mikko Peltoniemi 
+Maintainer: Francesco Minunno <checcomi@gmail.com>
+Description: Implements PRELES,YASSO and PREBAS models to be called from R
+Imports: sm,  dplyr, plyr, data.table, Matrix, zoo, abind
+License: What license is it under?
+Encoding: UTF-8
+LazyData: true
+RoxygenNote: 7.3.1
+Suggests: 
+    rmarkdown,
+    knitr
+VignetteBuilder: knitr
